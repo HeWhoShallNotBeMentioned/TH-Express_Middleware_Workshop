@@ -14,6 +14,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use((req, res, next)=>{
+  const num = parseFloat(req.body.number);
+  const result = num * 2;
+  req.doubled = result;
+  next();
+});
+
 app.use('/', routes);
 
 // catch 404 and forward to error handler
