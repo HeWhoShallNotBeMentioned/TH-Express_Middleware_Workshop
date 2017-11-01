@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
+const multiply = require('./multiply');
 
 const routes = require('./routes/index');
 
@@ -14,20 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use((req, res, next)=>{
-  //Allows page to be loaded without having a value
-  if (req.body.number === undefined) {
-    return next();
-  }
-  const num = parseFloat(req.body.number);
-  if (isNaN(num)) {
-    const err = new Error('Submitted value is not a number.');
-    return next(err);
-  }
-    const result = num * 2;
-    req.doubled = result;
-    next();
-});
+app.use(multiply({by: 3}));
 
 app.use('/', routes);
 
