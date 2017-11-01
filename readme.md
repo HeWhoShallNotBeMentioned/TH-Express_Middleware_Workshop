@@ -1,35 +1,29 @@
-# _{Application Name}_
+# _{TH-Express_Middleware_Workshop}_
 
-#### _{Brief description of application}, {//2017}_
+#### _{A small app to review Express middleware}, {11/1/2017}_
 
 #### By _**{Chris Underwood}**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_{An application that takes in a single numerical value, triples it, and shows it on the screen.The purpose of this app is really to explore middleware patterns such as require and moving middle ware apps off the main app.js page into their own modules. }_
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
 
-
-_{Run npm install from the command line. Install and run nodemon to keep node.js updating without having to do manual reboots.}_
+_{Download the files and migrate to the folder where the files reside via the terminal. Run npm install from the command line. Install and run nodemon to keep node.js updating without having to do manual reboots.}_
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+_{Once in an error by putting in the wrong kind of value, the app does not do a good job in letting the user out of the loop. Best bet is reloading the app by putting a '/' at the end of the url and hitting enter to reset. }_
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_{cunderwoodmn [at] gmail {dot} com}_
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+_{HTML5, CSS3, vanilla-JS, node.js, Express, bodyParser}_
 
 ### License
 
